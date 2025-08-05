@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <div id="numero1"></div>
+    <div id="numero2"></div>
+    <div id="suma"></div>
+    <div id="resta"></div>
+    <div id="multiplicacion"></div>
+    <div id="division"></div>
+    <div id="exponente"></div>
+
+    <script>
+        const numero1 = parseFloat(prompt("Ingrese un numero:"))
+        const numero2 = parseFloat(prompt("Ingrese otro numero:"))
+        
+        const divNumero1 = document.getElementById("numero1")
+        divNumero1.innerText = `Numero 1: ${numero1}`
+        document.getElementById("numero2").innerText=`Numero 2: ${numero2}`
+
+        //Operaciones
+        const suma = numero1 + numero2
+        document.getElementById("suma").innerHTML = `<b>Suma:</b> ${suma}`;
+        console.log(`La suma de ${numero1} + ${numero2} es ${suma}`)
+
+        const resta = numero1-numero2
+        document.getElementById("resta").innerHTML = `<b>Resta:</b> ${resta}`;
+        console.log(`La resta de ${numero1} - ${numero2} es ${resta}`)
+
+        const multiplicacion = numero1*numero2
+        document.getElementById("multiplicacion").innerHTML = `<b>Multiplicacion:</b> ${multiplicacion}`;
+        console.log(`La multiplicacion de ${numero1} x ${numero2} es ${multiplicacion}`)
+
+        const division = Math.floor(numero1/numero2)
+        document.getElementById("division").innerHTML = `<b>Division:</b> ${division}`;
+        console.log(`La division de ${numero1} / ${numero2} es ${division}`)
+
+        const exponente = (numero1 ** numero2).toFixed(2)
+        document.getElementById("exponente").innerHTML = `<b>Exponente:</b> ${exponente}`;
+        console.log(`El resultado de ${numero1} elevado a ${numero2} es ${exponente}`)
+    </script>    
+</body>
+</html>
